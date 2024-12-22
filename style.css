@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=Young+Serif&display=swap');
+
+:root{
+    /* ### Primary */
+
+    --Linear-gradient-active-input-border: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --Red-input-errors: hsl(0, 100%, 66%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+
+    --fs: 18px;
+    --ff: 'Space Grotesk', 'Segoe UI';
+}
+
+*{
+    font-family: var(--ff);
+    @media (max-width: 450px){
+        font-size: 10px;
+    }
+}
+body{
+    @media (max-width: 450px){
+        background-image: url(images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    @media (min-width: 800px){
+        background-image: url(images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-size:auto;
+    }
+}
+
+
+.left{
+    margin-left: 7.5rem;
+    color: var(--White);
+}
+
+#img1{
+    position: relative;
+    top: 7rem;
+    left: 0;
+
+    @media (max-width: 450px){
+        top: 12rem;
+        left: -7rem;
+        width: 100%;
+    }
+}
+
+#img2{
+    position: relative;
+    top: 24.5rem;
+    left: -22rem;
+
+    @media (max-width: 450px){
+        top: -14rem;
+        left: -2rem;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.cardText, .cardLogo, #cvcValue{
+    position: absolute;
+}   
+
+.cardLogo{
+    top: 9rem;
+    left: 10rem;
+    z-index: 3;
+
+    @media (max-width: 450px){
+        top: 14rem;
+        width: 15%;
+        left: 3rem;
+    }
+}
+
+#cvcValue{
+    top: 31rem;
+    left: 37rem;
+
+    @media (max-width: 450px){
+        top: 10rem;
+        left: 30rem;
+    }
+}
+
+.error{
+    color: var(--Red-input-errors);
+}
+
+#cardTextNo{
+    top: 14rem;
+    left: 10rem;
+    text-align: center;
+    font-size: 2rem;
+
+    @media (max-width: 450px){
+        top: 20rem;
+        left: 3rem;
+    }
+}
+
+form input.incorrect{
+    border-color: var(--Red-input-errors);
+}
+
+#cardTextName{
+    top: 19rem;
+    left: 10rem;
+    text-transform: uppercase;
+
+    @media (max-width: 450px){
+        top: 25rem;
+        left: 3rem;
+    }
+}
+
+#cardTextDate{
+    top: 19rem;
+    left: 30rem;
+    /* border: 1px solid; */
+    @media (max-width: 450px){
+        top: 25rem;
+        left: 25rem;
+    }
+}
+
+.right{
+    margin-left: 50rem;
+    margin-top: -4rem;
+    /* border: 1px solid; */
+    @media (max-width: 450px){
+        margin-left: 2rem;
+    }
+}
+
+
+.monthYear input{
+    width: 20%;
+}
+
+.right input{
+    width: 22rem;
+    height: 2.5rem;
+    border-radius: .5rem;
+    /* border: none; */
+    border: 1px solid #ccc;
+    padding-left: 1rem;
+    margin-top: -.9rem;
+    @media (max-width: 450px){
+        width: 90%;
+        height: 4rem;
+    }
+}
+
+.right input::placeholder{
+    color: var(--Light-grayish-violet);
+    font-weight: 700;
+    font-size: var(--fs);
+}
+
+.bottom{
+    display: flex;
+}
+
+#month, #year{
+    width: 4rem;
+}
+
+.cvc{
+    transform: translateX(-10rem);
+}
+
+
+#year{
+    margin-top: -10rem;
+    margin-left: 6rem;
+    transform: translateY(-3.1rem);
+}
+
+#CVC{
+    width: 10rem;
+}
+
+form input:hover{
+    border: 2px solid var(--Dark-grayish-violet);
+}
+
+
+
+form input:focus{
+    outline: none;
+    border-color: var(--Linear-gradient-active-input-border);
+}
+
+.date{
+    width: 100%;
+}
+
+button{
+    background-color: var(--Very-dark-violet);
+    color: white;
+    border: none;
+    margin-top: 2rem;
+    padding: 1rem 9.5rem;
+    border-radius: .7rem;
+    font-size: var(--fs);
+    cursor: pointer;
+    @media (max-width: 450px){
+        width: 95%;
+        margin-top: 0;
+    }
+}
+
+.incorrect input{
+    border-color: red !important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.end{
+    margin-left: 50rem;
+    margin-top: -4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 450px){
+        margin-left: 2rem;
+    }
+}
+
+.end h2{
+    text-transform: uppercase;
+    @media (max-width: 450px){
+        font-size: 40px;
+    }
+}
+.end p{
+    color: var(--Dark-grayish-violet);
+    @media (max-width: 450px){
+        font-size: 20px;
+        margin-top: -1rem;
+    }
+}

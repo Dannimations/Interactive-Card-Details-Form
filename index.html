@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="mainContainer">
+    <div class="left">
+      <img src="images/card-logo.svg" alt="" class="cardLogo">
+      <img src="images/bg-card-front.png" id="img1">
+      <p class="cardText" id="cardTextNo">0000 0000 0000 0000</p>
+      <p class="cardText" id="cardTextName">Jane Appleseed</p>
+      <p class="cardText" id="cardTextDate"><span id="monthValue">00</span>/<span id="yearValue">00</span></p>
+      <img src="images/bg-card-back.png" alt="" id="img2">
+      <p id="cvcValue">000</p>
+    </div>
+    <form id="form">
+      <div class="right">
+        <h4>Cardholder Name</h4>
+
+        <input type="text" name="FullName" id="fullName" placeholder="e.g. Jane Appleseed">
+        <p id="nameError" class="error"></p>
+        <h4>Card Number</h4>
+
+        <input type="number" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+        <p id="numberError" class="error"></p>
+
+        <div class="bottom">
+          <div class="date">
+            <h4>Exp. Date (MM/YY)</h4>
+            <div class="monthYear">
+              <input type="number" name="month" id="month" placeholder="MM">
+              <p id="monthError" class="error"></p>
+
+              <input type="number" name="year" id="year" placeholder="YY">
+              <p id="yearError" class="error"></p>
+            </div>
+          </div>
+
+          <div class="cvc">
+            <h4>CVC</h4>
+            <input type="number" name="CVC" id="CVC" placeholder="e.g. 123">
+            <p id="cvcError" class="error"></p>
+          </div>
+        </div>
+        <button type="submit">Confirm</button>
+      </div>
+    </form>
+
+    <div class="end hidden">
+      <img src="images/icon-complete.svg" alt="">
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button>Continue</button>
+    </div>
+
+  </div>
+
+  
+
+  <script src="index.js"></script>
+</body>
+</html>
